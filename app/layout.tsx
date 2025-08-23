@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
+import Navbar from '@/components/Navbar'
+
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -19,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bricolage.variable} antialiased`}>{children}</body>
+      <body className={`${bricolage.variable} antialiased`}>
+        {/* <Button>fsdfds fsdd</Button> */}
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
