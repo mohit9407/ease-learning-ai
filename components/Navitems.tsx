@@ -13,7 +13,6 @@ const arrayItems = [
 const Navitems = () => {
   const pathname = usePathname();
 
-  console.log('pathname?????', pathname)
   return (
     <nav className="flex items-center gap-4 ">
       {arrayItems.map(e => (

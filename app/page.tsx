@@ -8,12 +8,16 @@ const Page = () => {
     <main>
       <h1 className="text-2xl underline"> Popular Companions </h1>
       <section className="home-section">
-        {recentSessions.slice(0, 3).map(rec => 
-          <CompanionCard {...rec} />
+        {recentSessions.slice(0, 3).map(rec =>
+          <CompanionCard key={`home-page-top-${rec.id}-${rec.name}`} {...rec} />
         )}
       </section>
       <section className="home-section">
-        <CompanionList />
+        <CompanionList
+          title="Recently completeed session"
+          companions={recentSessions}
+          classNames="w-2/3 max-lg:w-full"
+        />
         <CTA />
       </section>
     </main>
